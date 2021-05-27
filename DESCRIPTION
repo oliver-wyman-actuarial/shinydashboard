@@ -1,12 +1,13 @@
-Package: shinydashboard
+Package: shinydashboardowac
 Title: Create Dashboards with 'Shiny'
-Version: 0.7.1
+Version: 0.7.2
 Authors@R: c(
     person("Winston", "Chang", role = c("aut", "cre"), email = "winston@rstudio.com"),
     person("Barbara", "Borges Ribeiro", role = "aut", email = "barbara@rstudio.com"),
     person(family = "RStudio", role = "cph"),
     person(family = "Almasaeed Studio", role = c("ctb", "cph"), comment = "AdminLTE theme for Bootstrap"),
-    person(family = "Adobe Systems Incorporated", role = c("ctb", "cph"), comment = "Source Sans Pro font")
+    person(family = "Adobe Systems Incorporated", role = c("ctb", "cph"), comment = "Source Sans Pro font"),
+    person("Bryce", "Bryce Chamberlain", role = "ctb", email = "bryce.chamberlain@oliverwyman.com", comment = "Fixed for strict CSP")
     )
 Description: Create dashboards with 'Shiny'. This package provides
     a theme on top of 'Shiny', making it easy to create attractive dashboards.
