@@ -111,14 +111,14 @@ dashboardHeader <- function(..., title = NULL, titleWidth = NULL, disable = FALS
       }
     '))))
   }
-
+  if(disable) stop('Inline styles (incl. disable) have been disabled. Please use a class instead.')
   tags$header(class = "main-header",
     custom_css,
-    style = if (disable) "display: none;",
+    #style = if (disable) "display: none;",
     span(class = "logo", title),
     tags$nav(class = "navbar navbar-static-top", role = "navigation",
       # Embed hidden icon so that we get the font-awesome dependency
-      span(shiny::icon("bars"), style = "display:none;"),
+      #span(shiny::icon("bars"), style = "display:none;"),
       # Sidebar toggle button
       a(href="#", class="sidebar-toggle", `data-toggle`="offcanvas",
         role="button",
@@ -299,7 +299,7 @@ taskItem <- function(text, value = 0, color = "aqua", href = NULL) {
       div(class = "progress xs",
         div(
           class = paste0("progress-bar progress-bar-", color),
-          style = paste0("width: ", value, "%"),
+          #style = paste0("width: ", value, "%"),
           role = "progressbar",
           `aria-valuenow` = value,
           `aria-valuemin` = "0",

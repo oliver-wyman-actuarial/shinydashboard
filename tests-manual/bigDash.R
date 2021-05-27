@@ -145,7 +145,12 @@ body <- dashboardBody(tabItems(
       href = "http://google.com"
     ),
     valueBox(
-      tagList("60", tags$sup(style = "font-size: 20px", "%")),
+      tagList("60", 
+        tags$sup(
+          #style = "font-size: 20px", 
+          "%"
+        )
+      ),
       "Approval Rating",
       icon = icon("line-chart"),
       color = "green"
@@ -268,7 +273,10 @@ server <- function(input, output) {
   })
 
   output$progress <- renderUI({
-    tagList(input$progress, tags$sup(style = "font-size: 20px", "%"))
+    tagList(input$progress, tags$sup(
+      #style = "font-size: 20px", 
+      "%"
+    ))
   })
 
   output$progress2 <- renderUI({

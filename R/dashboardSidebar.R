@@ -163,7 +163,7 @@ sidebarUserPanel <- function(name, subtitle = NULL, image = NULL) {
     },
     div(class = "pull-left info",
       # If no image, move text to the left: by overriding default left:55px
-      style = if (is.null(image)) "left: 4px",
+      #style = if (is.null(image)) "left: 4px",
       p(name),
       subtitle
     )
@@ -190,7 +190,7 @@ sidebarSearchForm <- function(textId, buttonId, label = "Search...",
   tags$form(class = "sidebar-form",
     div(class = "input-group",
       tags$input(id = textId, type = "text", class = "form-control",
-        placeholder = label, style = "margin: 5px;"
+        placeholder = label#, style = "margin: 5px;"
       ),
       span(class = "input-group-btn",
         tags$button(id = buttonId, type = "button",
@@ -444,7 +444,7 @@ menuItem <- function(text, ..., icon = NULL, badgeLabel = NULL, badgeColor = "gr
     # selected items to restore.
     do.call(tags$ul, c(
       class = paste0("treeview-menu", if (isExpanded) " menu-open" else ""),
-      style = paste0("display: ",     if (isExpanded) "block;" else "none;"),
+      #style = paste0("display: ",     if (isExpanded) "block;" else "none;"),
       `data-expanded` = expandedName,
       subItems))
   )

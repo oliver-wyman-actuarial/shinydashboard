@@ -299,10 +299,10 @@ box <- function(..., title = NULL, footer = NULL, status = NULL,
       collapseTag
     )
   }
-
+  if (!is.null(style)) stop('Inline styles have been disabled. Please use a class instead.')
   div(class = if (!is.null(width)) paste0("col-sm-", width),
     div(class = boxClass,
-      style = if (!is.null(style)) style,
+      #style = if (!is.null(style)) style,
       headerTag,
       div(class = "box-body", ...),
       if (!is.null(footer)) div(class = "box-footer", footer)
@@ -378,9 +378,10 @@ tabBox <- function(..., id = NULL, selected = NULL, title = NULL,
 
   # Set height
   if (!is.null(height)) {
-    content <- tagAppendAttributes(content,
-      style = paste0("height: ", validateCssUnit(height))
-    )
+    stop('Inline styles (incl. height) have been disabled. Please use a class instead.')
+    #content <- tagAppendAttributes(content,
+    #  style = paste0("height: ", validateCssUnit(height))
+    #)
   }
 
   # Move tabs to right side if needed
